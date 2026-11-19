@@ -690,7 +690,10 @@ function SourceLink({ source }) {
   return (
     <View style={{ flexDirection: 'row', flexWrap: 'wrap', alignItems: 'center' }}>
       <Text style={s.meta}>Source: </Text>
-      <TouchableOpacity href={source.url} accessibilityRole="link" onPress={() => Linking.openURL(source.url)}>
+      <TouchableOpacity
+        href={source.url} hrefAttrs={{ target: '_blank', rel: 'noopener noreferrer' }} accessibilityRole="link"
+        onPress={Platform.OS === 'web' ? undefined : () => Linking.openURL(source.url)}
+      >
         <Text style={s.sourceLink}>{label} ↗</Text>
       </TouchableOpacity>
     </View>

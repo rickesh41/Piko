@@ -1,0 +1,7 @@
+{
+  "expo": {
+    "name": "Piko",
+    "slug": "piko",
+    "web": { "bundler": "metro", "output": "single" }
+  }
+}

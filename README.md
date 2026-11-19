@@ -10,16 +10,18 @@ A single-file React Native app (`App.js`) that shows how Suvai works. It uses on
 
 ## Run it on your computer
 
-Requires Node.js.
+Requires Node.js 20 or later.
 
 ```
-npx create-expo-app suvai --template blank
-cd suvai
-# replace the generated App.js with this App.js
-npx expo start
+npm install
+npm run web      # opens the app in your browser
+npm start        # then scan the QR code with Expo Go on your phone
+npm run build    # static web export into dist/
 ```
 
-Then scan the QR code with Expo Go, or press `a` for an Android emulator.
+## Deployment
+
+Vercel builds the web version with `npx expo export -p web` and serves `dist/` (see `vercel.json`).
 
 ## Things to try
 
